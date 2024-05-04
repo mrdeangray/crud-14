@@ -1,0 +1,36 @@
+.container {
+    height: 500px;
+    background-color: grey;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 15px;
+  }
+  
+  .header {
+    grid-column-start: span 5;
+    background-color: rgba(6, 6, 6, 0.2);
+
+    color: white;
+  }
+  
+  .main {
+    grid-column: span 3;
+    grid-row: span 3;
+    background-color: rgba(255, 0, 0, 0.2);
+    color: white;
+  }
+  
+  .left-side {
+    grid-row: span 3;
+    background-color: pink;
+  }
+  .right-side  {
+    grid-row: span 3;
+    background-color: blue;
+  }
+  
+  .footer {
+    grid-column: span 5;
+    background-color: orange;
+  }
