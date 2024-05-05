@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import { CompanyContext } from "../../context/CompanyProvider";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import "./update-styles.css";
 
 const Input = styled.input`
   border: 1px solid blue;
@@ -25,7 +26,7 @@ const UpdateCompany = () => {
     const curr = companies.find((company) => company.id === id);
     setCurrCompany(curr);
     setInputValue(curr.name);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSubmit = (event) => {
@@ -52,16 +53,21 @@ const UpdateCompany = () => {
   };
 
   return (
-    <div>
-      <Link to={`/`}>Back</Link>
+    <div className="update">
+<div className="header">
+<Link to={`/`}>Back</Link>
       <h6>Update: {currCompany.name}</h6>
-      <form onSubmit={handleSubmit}>
+</div>
+<div className="left-side"></div>
+<div className="main">
+<form onSubmit={handleSubmit}>
         <Input value={inputValue} onChange={handleChange} autoFocus />
       </form>
       {companies.map((company) => {
         return <span key={company.id}>{company.name}, </span>;
       })}
 
+</div>
       {isUpdating && <Msg>Updating...</Msg>}
     </div>
   );

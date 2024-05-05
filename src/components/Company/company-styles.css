@@ -1,0 +1,12 @@
+.box{
+    display: grid;
+    color: white;
+    grid-template-columns: repeat(4, 1fr) ;
+    border: 1px solid black;
+    border-radius: 10px;
+    row-gap: 10px;
+} 
+.box > *{
+
+    border: 1px solid black;
+}

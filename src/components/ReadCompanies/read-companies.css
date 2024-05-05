@@ -3,13 +3,13 @@
     background-color: grey;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 60px  repeat(3, 1fr) 60px;
     gap: 15px;
   }
   
   .header {
     grid-column-start: span 5;
-    background-color: rgba(6, 6, 6, 0.2);
+    background-color: rgba(0, 0, 0, 1);
 
     color: white;
   }
@@ -32,5 +32,5 @@
   
   .footer {
     grid-column: span 5;
-    background-color: orange;
+    background-color: rgb(77, 50, 0);
   }

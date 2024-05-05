@@ -1,19 +1,22 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import "./company-styles.css"
 
-const Box = styled.div`
-  border: 1px solid black;
-  border-radius: 5px;
+// const Box = styled.div`
+//   border: 1px solid black;
+//   border-radius: 5px;
 
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
-  color: white;
-`;
+//   width: 80%;
+//   margin: 0 auto;
+//   margin-bottom: 15px;
+//   display: grid;
+//   color: red;
+//   grid-template-columns: repeat(4, 1fr) ;
+//   border: 3px solid black;
+
+//   color: white;
+// `;
 
 const Company = ({ company }) => {
   const [score, setScore] = useState(0);
@@ -33,12 +36,12 @@ const Company = ({ company }) => {
   };
 
   return (
-    <Box>
+    <div className="box">
       <span>{company.name}</span>
       <span>score: {score}</span>
       <Link to={`/update/${company.id}`}>Update</Link>
       <Link to={`/delete/${company.id}`}>Delete</Link>
-    </Box>
+    </div>
   );
 };
 

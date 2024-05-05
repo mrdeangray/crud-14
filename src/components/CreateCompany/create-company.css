@@ -1,0 +1,26 @@
+.create-container{
+    background-color: grey;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr) 100px;
+    grid-template-rows: 100px repeat(3, 1fr) 100px;
+}
+.create-container .header{
+    height: 80px;
+    background-color: black;
+}
+
+.create-container .footer{
+    height: 80px;
+    /* background-color: black; */
+}
+
+.create-container span{
+border: 2px solid green;
+}
+
+.create-container .list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    }
